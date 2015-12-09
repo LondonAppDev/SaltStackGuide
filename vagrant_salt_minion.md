@@ -4,7 +4,13 @@
 I tried to following the official Vagrant Salt Provisioning guide (https://docs.vagrantup.com/v2/provisioning/salt.html) however I got the following error:
 
 ```
+Failed to upload a file to the guest VM via SCP due to a permissions
+error. This is normally because the SSH user doesn't have permission
+to write to the destination location. Alternately, the user running
+Vagrant on the host machine may not have permission to read the file.
 
+Source: C:/Users/mark/Workspace/django-salted/salt/minion.conf
+Dest: /etc/salt/minion
 ```
 
 Fortunately, it's just as easy to provision vagrant with Salt using a basic shell script.
