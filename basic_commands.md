@@ -21,6 +21,12 @@ List all disconnected minions:
 sudo salt-run manage.down
 ```
 
+Apple latest states to minions
+
+```
+sudo salt '*' state.highstate
+```
+
 Check
 
 ## Minion ##
