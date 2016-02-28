@@ -52,3 +52,36 @@ Restart the Salt Minion service:
 ```
 sudo service salt-minion restart
 ```
+
+### Bootstrapping a minion ###
+
+ # Install curl:
+ 
+```
+sudo apt-get install curl
+```
+
+ # Download the bootstrapping script and then run it:
+ 
+```
+cd ~
+curl -L https://bootstrap.saltstack.com -o install_salt.sh
+sudo sh install_salt.sh
+```
+
+ # Edit the `/etc/salt/minion` directory entering the masters name:
+```
+master <url/ip address for master>
+```
+
+ # Restart the salt-minion:
+ 
+```
+sudo service salt-minion restart
+```
+
+ # Finally, on the salt master, you must accept the key:
+ 
+```
+sudo salt-key --accept <hostname>
+```
