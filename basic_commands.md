@@ -27,7 +27,23 @@ Apple latest states to minions
 sudo salt '*' state.highstate
 ```
 
-Check
+List keys
+
+```
+sudo salt-key --list all
+```
+
+Accept all keys
+
+```
+sudo salt-key --accept-all
+```
+
+Accept key
+
+```
+sudo salt-key --accept uk1.local
+```
 
 ## Minion ##
 
